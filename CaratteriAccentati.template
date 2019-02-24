@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<Settings>
+  <MultipleSearchAndReplaceList>
+    <Group>
+      <Name>0. Base</Name>
+      <MultipleSearchAndReplaceItem>
+        <Enabled>True</Enabled>
+        <FindWhat>''</FindWhat>
+        <ReplaceWith>"</ReplaceWith>
+        <SearchType>Normal</SearchType>
+        <Description />
+      </MultipleSearchAndReplaceItem>
+      <MultipleSearchAndReplaceItem>
+        <Enabled>True</Enabled>
+        <FindWhat>\.{2,}</FindWhat>
+        <ReplaceWith>...</ReplaceWith>
+        <SearchType>RegularExpression</SearchType>
+        <Description />
+      </MultipleSearchAndReplaceItem>
+    </Group>
+    <Group>
+      <Name>1. Da controllare manualmente</Name>
+      <MultipleSearchAndReplaceItem>
+        <Enabled>True</Enabled>
+        <FindWhat>(?&lt;!\w)'(\w.*?)'(?!\w)</FindWhat>
+        <ReplaceWith>"$1"</ReplaceWith>
+        <SearchType>RegularExpression</SearchType>
+        <Description>Cambia il testo tra gli apici con testo tra virgolette</Description>
+      </MultipleSearchAndReplaceItem>
+    </Group>
+    <Group>
+      <Name>2. Caratteri Accentati</Name>
+      <MultipleSearchAndReplaceItem>
+        <Enabled>True</Enabled>
+        <FindWhat>\be'(?!\w)</FindWhat>
+        <ReplaceWith>è</ReplaceWith>
+        <SearchType>RegularExpression</SearchType>
+        <Description>"è"</Description>
+      </MultipleSearchAndReplaceItem>
+      <MultipleSearchAndReplaceItem>
+        <Enabled>True</Enabled>
+        <FindWhat>\bE'(?!\w)</FindWhat>
+        <ReplaceWith>È</ReplaceWith>
+        <SearchType>RegularExpression</SearchType>
+        <Description>"È"</Description>
+      </MultipleSearchAndReplaceItem>
+      <MultipleSearchAndReplaceItem>
+        <Enabled>True</Enabled>
+        <FindWhat>\b(?i)(cio|t)(?-i)e'(?!\w)</FindWhat>
+        <ReplaceWith>$1è</ReplaceWith>
+        <SearchType>RegularExpression</SearchType>
+        <Description>"cioè", "tè"</Description>
+      </MultipleSearchAndReplaceItem>
+      <MultipleSearchAndReplaceItem>
+        <Enabled>True</Enabled>
+        <FindWhat>\b(?i)(cio|t)(?-i)E'(?!\w)</FindWhat>
+        <ReplaceWith>$1È</ReplaceWith>
+        <SearchType>RegularExpression</SearchType>
+        <Description>"CIOÈ", "TÈ"</Description>
+      </MultipleSearchAndReplaceItem>
+      <MultipleSearchAndReplaceItem>
+        <Enabled>True</Enabled>
+        <FindWhat>(?&lt;!(?i)\bd|\bb)e'(?!\w)</FindWhat>
+        <ReplaceWith>é</ReplaceWith>
+        <SearchType>RegularExpression</SearchType>
+        <Description>NO: de', be'</Description>
+      </MultipleSearchAndReplaceItem>
+      <MultipleSearchAndReplaceItem>
+        <Enabled>True</Enabled>
+        <FindWhat>(?&lt;!(?i)\bd|\bb)E'(?!\w)</FindWhat>
+        <ReplaceWith>É</ReplaceWith>
+        <SearchType>RegularExpression</SearchType>
+        <Description>NO: DE', BE'</Description>
+      </MultipleSearchAndReplaceItem>
+      <MultipleSearchAndReplaceItem>
+        <Enabled>True</Enabled>
+        <FindWhat>(?&lt;!(?i)\b|\bst|\bf|\bd|\bv)a'(?!\w)</FindWhat>
+        <ReplaceWith>à</ReplaceWith>
+        <SearchType>RegularExpression</SearchType>
+        <Description>NO: a', sta', fa', da', va'</Description>
+      </MultipleSearchAndReplaceItem>
+      <MultipleSearchAndReplaceItem>
+        <Enabled>True</Enabled>
+        <FindWhat>(?&lt;!(?i)\b|\bst|\bf|\bd|\bv)A'(?!\w)</FindWhat>
+        <ReplaceWith>À</ReplaceWith>
+        <SearchType>RegularExpression</SearchType>
+        <Description>NO: A', STA', FA', DA', VA'</Description>
+      </MultipleSearchAndReplaceItem>
+      <MultipleSearchAndReplaceItem>
+        <Enabled>True</Enabled>
+        <FindWhat>u'(?!\w)</FindWhat>
+        <ReplaceWith>ù</ReplaceWith>
+        <SearchType>RegularExpression</SearchType>
+        <Description />
+      </MultipleSearchAndReplaceItem>
+      <MultipleSearchAndReplaceItem>
+        <Enabled>True</Enabled>
+        <FindWhat>U'(?!\w)</FindWhat>
+        <ReplaceWith>Ù</ReplaceWith>
+        <SearchType>RegularExpression</SearchType>
+        <Description />
+      </MultipleSearchAndReplaceItem>
+      <MultipleSearchAndReplaceItem>
+        <Enabled>True</Enabled>
+        <FindWhat>\b(?i)(s|cos)i'(?!\w)</FindWhat>
+        <ReplaceWith>$1ì</ReplaceWith>
+        <SearchType>RegularExpression</SearchType>
+        <Description>"sì", "così"</Description>
+      </MultipleSearchAndReplaceItem>
+      <MultipleSearchAndReplaceItem>
+        <Enabled>True</Enabled>
+        <FindWhat>(?&lt;!(?i)\bd)i'(?!\w)</FindWhat>
+        <ReplaceWith>ì</ReplaceWith>
+        <SearchType>RegularExpression</SearchType>
+        <Description>NO: di'</Description>
+      </MultipleSearchAndReplaceItem>
+      <MultipleSearchAndReplaceItem>
+        <Enabled>True</Enabled>
+        <FindWhat>(?&lt;!(?i)\bd)I'(?!\w)</FindWhat>
+        <ReplaceWith>Ì</ReplaceWith>
+        <SearchType>RegularExpression</SearchType>
+        <Description>NO: DI'</Description>
+      </MultipleSearchAndReplaceItem>
+      <MultipleSearchAndReplaceItem>
+        <Enabled>True</Enabled>
+        <FindWhat>(?&lt;!(?i)\bp|\bm|\bc)o'(?!\w)</FindWhat>
+        <ReplaceWith>ò</ReplaceWith>
+        <SearchType>RegularExpression</SearchType>
+        <Description>NO: po', mo', co'</Description>
+      </MultipleSearchAndReplaceItem>
+      <MultipleSearchAndReplaceItem>
+        <Enabled>True</Enabled>
+        <FindWhat>(?&lt;!(?i)\bp|\bm|\bc)O'(?!\w)</FindWhat>
+        <ReplaceWith>Ò</ReplaceWith>
+        <SearchType>RegularExpression</SearchType>
+        <Description>NO: PO', MO', CO'</Description>
+      </MultipleSearchAndReplaceItem>
+    </Group>
+    <Group>
+      <Name>3. Da controllare manualmente</Name>
+      <MultipleSearchAndReplaceItem>
+        <Enabled>True</Enabled>
+        <FindWhat>(?&lt;=[D|d])a'(?!\w)</FindWhat>
+        <ReplaceWith>à</ReplaceWith>
+        <SearchType>RegularExpression</SearchType>
+        <Description>Da controllare manualmente</Description>
+      </MultipleSearchAndReplaceItem>
+      <MultipleSearchAndReplaceItem>
+        <Enabled>True</Enabled>
+        <FindWhat>(?&lt;=[D|d])A'(?!\w)</FindWhat>
+        <ReplaceWith>À</ReplaceWith>
+        <SearchType>RegularExpression</SearchType>
+        <Description>Da controllare manualmente</Description>
+      </MultipleSearchAndReplaceItem>
+      <MultipleSearchAndReplaceItem>
+        <Enabled>True</Enabled>
+        <FindWhat>(?&lt;=[D|d])i'(?!\w)</FindWhat>
+        <ReplaceWith>ì</ReplaceWith>
+        <SearchType>RegularExpression</SearchType>
+        <Description>Da controllare manualmente</Description>
+      </MultipleSearchAndReplaceItem>
+      <MultipleSearchAndReplaceItem>
+        <Enabled>True</Enabled>
+        <FindWhat>(?&lt;=[D|d])I'(?!\w)</FindWhat>
+        <ReplaceWith>Ì</ReplaceWith>
+        <SearchType>RegularExpression</SearchType>
+        <Description>Da controllare manualmente</Description>
+      </MultipleSearchAndReplaceItem>
+    </Group>
+  </MultipleSearchAndReplaceList>
+</Settings>
